@@ -2,8 +2,10 @@ var app = angular.module("catApp", ["ngRoute"]);
 
 app.config(function ($routeProvider) {
 	$routeProvider.when("/cats", {
-		templateUrl: "../cat.html"
+		templateUrl: "cat.html"
 	}).when("/dogs", {
-		templateUrl:"../dog.html"
-	});
+		templateUrl:"dog.html"
+	}).otherwise(
+		{templateUrl:"cat.html"}
+	);
 });
